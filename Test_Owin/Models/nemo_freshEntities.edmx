@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище nemo_freshModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id_User" />
+          </Key>
+          <Property Name="id_User" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserRealName" Type="nvarchar" MaxLength="255" />
+          <Property Name="UserPatronymic" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserOldSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserGroup_id" Type="int" />
+          <Property Name="UserType_id" Type="int" />
+          <Property Name="Hours" Type="real" />
+          <Property Name="comment" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="Boss_Id" Type="int" />
+          <Property Name="Boss_Id2" Type="int" />
+          <Property Name="Boss_Id3" Type="int" />
+          <Property Name="ComputerName" Type="nvarchar" MaxLength="255" />
+          <Property Name="UniqueUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="PAFirmID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ExternalCaseComments" Type="nvarchar" MaxLength="255" />
+          <Property Name="CasesCriteria" Type="nvarchar" MaxLength="255" />
+          <Property Name="NotWorking" Type="bit" />
+          <Property Name="Hours_comment" Type="nvarchar" MaxLength="50" />
+          <Property Name="Hours_Employee" Type="real" />
+          <Property Name="Vacation_days" Type="int" />
+          <Property Name="Vacation_hours" Type="real" />
+          <Property Name="Vacation_totalHours" Type="real" />
+          <Property Name="IsOfficially" Type="bit" />
+          <Property Name="ShowTM" Type="bit" />
+          <Property Name="ShowClosedCases" Type="bit" />
+          <Property Name="ShowOnlyTM" Type="bit" />
+          <Property Name="PersonalSkype" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkSkype" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonalEmails" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactPhones" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServerAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServerPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="AllowCashOperations" Type="bit" />
+          <Property Name="BirthDate" Type="smalldatetime" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="InfoPageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageLink" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmployeeInfo" Type="nvarchar(max)" />
+          <Property Name="OfficeID" Type="int" />
+          <Property Name="FIRMID" Type="int" />
+          <Property Name="WorkingSince" Type="smalldatetime" />
+          <Property Name="TestNextAttemptDate" Type="date" />
+          <Property Name="NeedCaptchaInput" Type="bit" />
+          <Property Name="RestrictedWithoutEmailAuth" Type="bit" />
+          <Property Name="AllowRemoteAccess" Type="bit" Nullable="false" />
+          <Property Name="AllowRemoteAccessExclusively" Type="bit" Nullable="false" />
+          <Property Name="tstamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="IsIntern" Type="bit" Nullable="false" />
+          <Property Name="WorkContactNumbers" Type="nvarchar" MaxLength="255" />
+          <Property Name="RegistrationAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="FactAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="Education" Type="nvarchar" MaxLength="255" />
+          <Property Name="Photo_link" Type="nvarchar" MaxLength="255" />
+          <Property Name="CV_link" Type="nvarchar" MaxLength="255" />
+          <Property Name="WorkingOut" Type="smalldatetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="Created_Date" Type="smalldatetime" />
+          <Property Name="Updated_By" Type="int" />
+          <Property Name="Updated_Date" Type="smalldatetime" />
+          <Property Name="SignatureLink" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsAdditionalVerification" Type="bit" />
+          <Property Name="PassedText" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="Хранилище nemo_freshModelContainer">
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nemo_freshModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id_User" />
+          </Key>
+          <Property Name="id_User" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserRealName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UserPatronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserOldSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroup_id" Type="Int32" />
+          <Property Name="UserType_id" Type="Int32" />
+          <Property Name="Hours" Type="Single" />
+          <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="Boss_Id" Type="Int32" />
+          <Property Name="Boss_Id2" Type="Int32" />
+          <Property Name="Boss_Id3" Type="Int32" />
+          <Property Name="ComputerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="PAFirmID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ExternalCaseComments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CasesCriteria" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NotWorking" Type="Boolean" />
+          <Property Name="Hours_comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hours_Employee" Type="Single" />
+          <Property Name="Vacation_days" Type="Int32" />
+          <Property Name="Vacation_hours" Type="Single" />
+          <Property Name="Vacation_totalHours" Type="Single" />
+          <Property Name="IsOfficially" Type="Boolean" />
+          <Property Name="ShowTM" Type="Boolean" />
+          <Property Name="ShowClosedCases" Type="Boolean" />
+          <Property Name="ShowOnlyTM" Type="Boolean" />
+          <Property Name="PersonalSkype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkSkype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonalEmails" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactPhones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServerAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AllowCashOperations" Type="Boolean" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="InfoPageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeID" Type="Int32" />
+          <Property Name="FIRMID" Type="Int32" />
+          <Property Name="WorkingSince" Type="DateTime" Precision="0" />
+          <Property Name="TestNextAttemptDate" Type="DateTime" Precision="0" />
+          <Property Name="NeedCaptchaInput" Type="Boolean" />
+          <Property Name="RestrictedWithoutEmailAuth" Type="Boolean" />
+          <Property Name="AllowRemoteAccess" Type="Boolean" Nullable="false" />
+          <Property Name="AllowRemoteAccessExclusively" Type="Boolean" Nullable="false" />
+          <Property Name="tstamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="IsIntern" Type="Boolean" Nullable="false" />
+          <Property Name="WorkContactNumbers" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FactAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Education" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Photo_link" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CV_link" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WorkingOut" Type="DateTime" Precision="0" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="Created_Date" Type="DateTime" Precision="0" />
+          <Property Name="Updated_By" Type="Int32" />
+          <Property Name="Updated_Date" Type="DateTime" Precision="0" />
+          <Property Name="SignatureLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsAdditionalVerification" Type="Boolean" />
+          <Property Name="PassedText" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="nemo_freshEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище nemo_freshModelContainer" CdmEntityContainer="nemo_freshEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="nemo_freshModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="id_User" ColumnName="id_User" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserRealName" ColumnName="UserRealName" />
+                <ScalarProperty Name="UserPatronymic" ColumnName="UserPatronymic" />
+                <ScalarProperty Name="UserOldSurname" ColumnName="UserOldSurname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UserGroup_id" ColumnName="UserGroup_id" />
+                <ScalarProperty Name="UserType_id" ColumnName="UserType_id" />
+                <ScalarProperty Name="Hours" ColumnName="Hours" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Boss_Id" ColumnName="Boss_Id" />
+                <ScalarProperty Name="Boss_Id2" ColumnName="Boss_Id2" />
+                <ScalarProperty Name="Boss_Id3" ColumnName="Boss_Id3" />
+                <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+                <ScalarProperty Name="UniqueUserID" ColumnName="UniqueUserID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="PAFirmID" ColumnName="PAFirmID" />
+                <ScalarProperty Name="ExternalCaseComments" ColumnName="ExternalCaseComments" />
+                <ScalarProperty Name="CasesCriteria" ColumnName="CasesCriteria" />
+                <ScalarProperty Name="NotWorking" ColumnName="NotWorking" />
+                <ScalarProperty Name="Hours_comment" ColumnName="Hours_comment" />
+                <ScalarProperty Name="Hours_Employee" ColumnName="Hours_Employee" />
+                <ScalarProperty Name="Vacation_days" ColumnName="Vacation_days" />
+                <ScalarProperty Name="Vacation_hours" ColumnName="Vacation_hours" />
+                <ScalarProperty Name="Vacation_totalHours" ColumnName="Vacation_totalHours" />
+                <ScalarProperty Name="IsOfficially" ColumnName="IsOfficially" />
+                <ScalarProperty Name="ShowTM" ColumnName="ShowTM" />
+                <ScalarProperty Name="ShowClosedCases" ColumnName="ShowClosedCases" />
+                <ScalarProperty Name="ShowOnlyTM" ColumnName="ShowOnlyTM" />
+                <ScalarProperty Name="PersonalSkype" ColumnName="PersonalSkype" />
+                <ScalarProperty Name="WorkSkype" ColumnName="WorkSkype" />
+                <ScalarProperty Name="PersonalEmails" ColumnName="PersonalEmails" />
+                <ScalarProperty Name="ContactPhones" ColumnName="ContactPhones" />
+                <ScalarProperty Name="ServerAccount" ColumnName="ServerAccount" />
+                <ScalarProperty Name="ServerPassword" ColumnName="ServerPassword" />
+                <ScalarProperty Name="AllowCashOperations" ColumnName="AllowCashOperations" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="InfoPageName" ColumnName="InfoPageName" />
+                <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+                <ScalarProperty Name="EmployeeInfo" ColumnName="EmployeeInfo" />
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="FIRMID" ColumnName="FIRMID" />
+                <ScalarProperty Name="WorkingSince" ColumnName="WorkingSince" />
+                <ScalarProperty Name="TestNextAttemptDate" ColumnName="TestNextAttemptDate" />
+                <ScalarProperty Name="NeedCaptchaInput" ColumnName="NeedCaptchaInput" />
+                <ScalarProperty Name="RestrictedWithoutEmailAuth" ColumnName="RestrictedWithoutEmailAuth" />
+                <ScalarProperty Name="AllowRemoteAccess" ColumnName="AllowRemoteAccess" />
+                <ScalarProperty Name="AllowRemoteAccessExclusively" ColumnName="AllowRemoteAccessExclusively" />
+                <ScalarProperty Name="tstamp" ColumnName="tstamp" />
+                <ScalarProperty Name="IsIntern" ColumnName="IsIntern" />
+                <ScalarProperty Name="WorkContactNumbers" ColumnName="WorkContactNumbers" />
+                <ScalarProperty Name="RegistrationAddress" ColumnName="RegistrationAddress" />
+                <ScalarProperty Name="FactAddress" ColumnName="FactAddress" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Photo_link" ColumnName="Photo_link" />
+                <ScalarProperty Name="CV_link" ColumnName="CV_link" />
+                <ScalarProperty Name="WorkingOut" ColumnName="WorkingOut" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+                <ScalarProperty Name="SignatureLink" ColumnName="SignatureLink" />
+                <ScalarProperty Name="IsAdditionalVerification" ColumnName="IsAdditionalVerification" />
+                <ScalarProperty Name="PassedText" ColumnName="PassedText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
